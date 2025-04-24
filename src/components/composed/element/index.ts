@@ -1,0 +1,5 @@
+export { default as ElementMetric } from './element.metric.vue'
+export { default as ElementStatisticPvP } from './element.statistic-pvp.vue'
+export { default as ElementStatisticPvE } from './element.statistic-pve.vue'
+export { default as ElementStatisticGames } from './element.statistic-game.vue'
+export { default as ElementLoveClass } from './element.love-class.vue'

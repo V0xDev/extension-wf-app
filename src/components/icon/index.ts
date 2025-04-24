@@ -1,0 +1,4 @@
+export { default as IconLogo } from './icon.logo.vue'
+export { default as IconArrowLeft } from './icon.arrow-left.vue'
+export { default as IconSearch } from './icon.search.vue'
+export { default as IconSettings } from './icon.settings.vue'

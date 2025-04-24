@@ -9,7 +9,7 @@
 </script>
 
 <template>
-  <div class="w-[380px] h-[550px] px-14 py-18 border-2 border-border-opacity flex flex-col">
+  <div class="w-[380px] h-[550px] border-2 border-border-opacity flex flex-col">
     <slot />
   </div>
 </template>

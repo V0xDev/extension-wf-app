@@ -14,7 +14,7 @@ const { data, isLoading, isError } = injectPlayerStats()
 </script>
 
 <template>
-  <div class="flex-1 overflow-y-auto">
+  <div class="flex-1 overflow-y-auto px-14 py-18">
     <CommonSkeletonWrapper v-if="isLoading">
       <SkeletonStatistic />
     </CommonSkeletonWrapper>
@@ -30,5 +30,3 @@ const { data, isLoading, isError } = injectPlayerStats()
     </div>
   </div>
 </template>
-
-<style lang="scss" scoped></style>

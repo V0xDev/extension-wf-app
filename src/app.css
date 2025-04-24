@@ -16,6 +16,7 @@
   --color-scrollbar-bg: #0000001a;
   --color-scrollbar-thumb: #00000080;
   --color-scrollbar-thumb-hover: #000000b3;
+  --shadow-b: 0px 4px 11px 3px #181818;
 }
 
 html {

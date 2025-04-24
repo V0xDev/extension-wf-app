@@ -30,9 +30,7 @@ const openSettings = () => {}
 </script>
 
 <template>
-  <div
-    class="w-full flex sticky top-0 z-10 items-start justify-between py-16 pt-24 mb-1 border-b border-border/80"
-  >
+  <div class="w-full px-14 py-16 pt-24 flex sticky top-0 z-10 items-start justify-between shadow-b">
     <button @click="onBack">
       <CommonIconWrapper>
         <IconArrowLeft />

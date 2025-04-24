@@ -22,8 +22,7 @@ const getClassName = computed(() => {
 </script>
 
 <template>
-  <CommonElementWrapper>
-    <h2 class="justify-items-start font-medium text-16 leading-16 text-dark">Любимые классы</h2>
+  <CommonElementWrapper title="Любимые классы">
     <ul class="flex gap-15">
       <li class="text-16 leading-16">
         PvP: <span class="text-dark opacity-50">{{ getClassName.pvpClassName }}</span>

@@ -1,6 +1,7 @@
-export { default as CommonButton } from './common.button.vue'
 export { default as CommonInput } from './common.input.vue'
 export { default as CommonIconWrapper } from './common.icon-wrapper.vue'
 export { default as CommonSkeletonWrapper } from './common.skeleton-wrapper.vue'
 export { default as CommonElementWrapper } from './common.element-wrapper.vue'
 export { default as CommonPartWrapper } from './common.part-wrapper.vue'
+export { default as CommonModalContainer } from './common.modal-container.vue'
+export { default as CommonSelect } from './common.select.vue'

@@ -5,6 +5,7 @@ import { IconArrowLeft, IconSettings } from '@/components/icon'
 import { CommonSkeletonWrapper } from '@/components/common'
 import { injectPlayerStats } from '@/store/store.provide'
 import { computed } from 'vue'
+import { injectModal } from '@/store/store.provide-modal'
 
 type Props = {
   link?: string
@@ -16,6 +17,8 @@ const router = useRouter()
 
 const { nickName, clanName, isLoading, shouldShowClan } = injectPlayerStats()
 
+const { show } = injectModal()
+
 const onBack = () => {
   if (props.link) return router.push(props.link)
 
@@ -25,8 +28,6 @@ const onBack = () => {
     router.push('/')
   }
 }
-
-const openSettings = () => {}
 </script>
 
 <template>
@@ -41,13 +42,13 @@ const openSettings = () => {}
         {{ nickName }}
       </h2>
       <CommonSkeletonWrapper v-if="isLoading">
-        <div class="mt-2 w-full h-14 rounded-full bg-white/60 dark:bg-dark/80"></div>
+        <div class="mt-2 w-full h-16 rounded-full bg-white/60 dark:bg-dark/80"></div>
       </CommonSkeletonWrapper>
       <p v-else-if="shouldShowClan" class="mt-2 text-color text-14 leading-16 opacity-40">
         {{ clanName }}
       </p>
     </div>
-    <button @click="openSettings">
+    <button @click="show">
       <CommonIconWrapper>
         <IconSettings />
       </CommonIconWrapper>

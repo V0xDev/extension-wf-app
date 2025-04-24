@@ -23,10 +23,10 @@ const { data, isLoading, isError } = injectPlayerStats()
     </p>
     <div class="flex flex-col gap-10" v-else>
       <ElementMetric v-bind="data" />
+      <ElementLoveClass v-bind="data" />
       <ElementStatisticGames v-bind="data" />
       <ElementStatisticPvP v-bind="data" />
       <ElementStatisticPvE v-bind="data" />
-      <ElementLoveClass v-bind="data" />
     </div>
   </div>
 </template>

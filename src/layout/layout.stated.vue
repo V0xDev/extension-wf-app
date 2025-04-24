@@ -9,9 +9,7 @@
 </script>
 
 <template>
-  <div
-    class="w-[380px] h-[550px] px-14 py-18 border-2 border-border-opacity flex flex-col items-center gap-20"
-  >
+  <div class="layout items-center gap-20 px-14 py-18">
     <slot />
   </div>
 </template>

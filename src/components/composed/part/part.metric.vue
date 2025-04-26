@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { CommonPartWrapper } from '@/components/common'
-import { prettyNumber } from '@/utils/number'
+import { CommonPartStatWrapper } from '@/components/common'
+import { prettyNumber } from '@/utils/utils.number'
 
 type Props = {
   title: string
@@ -11,8 +11,8 @@ defineProps<Props>()
 </script>
 
 <template>
-  <CommonPartWrapper>
-    <h2 class="font-medium text-16 leading-16 text-primary">{{ title }}</h2>
-    <p class="font-bold text-16 leading-16 text-secondary">{{ prettyNumber(value) }}</p>
-  </CommonPartWrapper>
+  <CommonPartStatWrapper>
+    <h2 class="font-medium text-14 leading-14 text-secondary">{{ title }}</h2>
+    <p class="font-bold text-16 leading-16 text-primary">{{ prettyNumber(value) }}</p>
+  </CommonPartStatWrapper>
 </template>

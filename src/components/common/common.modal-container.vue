@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { injectModal } from '@/provide/store.provide-modal'
+import { injectModal } from '@/provide/provide.modal'
 
 const { state, close } = injectModal()
 </script>
@@ -9,7 +9,7 @@ const { state, close } = injectModal()
     <div
       v-if="state"
       class="modal"
-      :class="[{ 'pointer-events-auto bg-black/90': state }]"
+      :class="[{ 'pointer-events-auto bg-bg/90': state }]"
       @click="close"
     >
       <div class="slide bg-dark-accent">

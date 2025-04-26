@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CommonElementWrapper } from '@/components/common'
+import { CommonElementStatWrapper } from '@/components/common'
 import { ApiResponse } from '@/types/dto/dto.api'
 import { computed } from 'vue'
 
@@ -22,14 +22,14 @@ const getClassName = computed(() => {
 </script>
 
 <template>
-  <CommonElementWrapper title="Любимые классы">
-    <ul class="flex gap-15">
-      <li class="text-primary text-16 leading-16">
-        PvP: <span class="text-secondary">{{ getClassName.pvpClassName }}</span>
+  <CommonElementStatWrapper title="Любимые классы">
+    <ul class="flex justify-evenly">
+      <li class="text-secondary text-14 leading-14">
+        PvP: <span class="text-primary">{{ getClassName.pvpClassName }}</span>
       </li>
-      <li class="text-primary text-16 leading-16">
-        PvE: <span class="text-secondary">{{ getClassName.pveClassName }}</span>
+      <li class="text-secondary text-14 leading-14">
+        PvE: <span class="text-primary">{{ getClassName.pveClassName }}</span>
       </li>
     </ul>
-  </CommonElementWrapper>
+  </CommonElementStatWrapper>
 </template>

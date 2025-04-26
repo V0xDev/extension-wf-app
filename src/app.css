@@ -13,6 +13,8 @@
 
   --color-bg: #212121;
 
+  --color-checkbox: #141414;
+
   --color-text-accent: #fff;
 
   --color-icon: #eaeaea;
@@ -23,7 +25,11 @@
 
   --color-input-text: #eaeaea;
 
-  --color-linear-gradient: #fff;
+  --shadow-b: 0px 2px 11px 0px #181818;
+
+  --color-scrollbar-bg: #0000001a;
+  --color-scrollbar-thumb: #00000080;
+  --color-scrollbar-thumb-hover: #000000b3;
 }
 
 @layer base {
@@ -33,7 +39,7 @@
     height: 550px;
     display: flex;
     flex-direction: column;
-    border: 2px solid var(--color-border);
+    border: 2px solid #0000008f;
   }
 
   .modal {

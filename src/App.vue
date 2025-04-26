@@ -3,8 +3,8 @@ import { computed, shallowRef } from 'vue'
 import { RouterView, useRoute } from 'vue-router'
 import LayoutDefault from '@/layout/layout.default.vue'
 import LayoutStated from '@/layout/layout.stated.vue'
-import { provideModal } from '@/provide/store.provide-modal'
-import { ElementModalSettings } from '@/components/composed/element'
+import { provideModal } from '@/provide/provide.modal'
+import { ModalSettings } from '@/components/modal'
 
 const layouts = {
   default: LayoutDefault,
@@ -24,6 +24,6 @@ provideModal()
 <template>
   <component :is="layoutComponent">
     <RouterView />
-    <ElementModalSettings />
+    <ModalSettings />
   </component>
 </template>

@@ -14,7 +14,7 @@ defineProps<ApiResponse>()
         <PartMetric title="Смертей" :value="death" />
         <PartMetric title="К/Д" :value="pvp" />
       </div>
-      <PartMetric title="Общее количество часов" :value="playtime_h" />
+      <PartMetric class="mt-18" title="Общее количество часов" :value="playtime_h" />
     </div>
   </CommonElementStatWrapper>
 </template>

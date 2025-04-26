@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { injectPlayerStats } from '@/store/store.provide'
+import { injectPlayerStats } from '@/provide/store.provide-player'
 import { SkeletonStatistic } from '@/components/composed/skeleton'
 import { CommonSkeletonWrapper } from '@/components/common'
 import {

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { injectModal } from '@/store/store.provide-modal'
+import { injectModal } from '@/provide/store.provide-modal'
 
 const { state, close } = injectModal()
 </script>

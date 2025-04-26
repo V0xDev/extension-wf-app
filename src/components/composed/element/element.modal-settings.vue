@@ -2,7 +2,7 @@
 import { CommonIconWrapper, CommonModalContainer, CommonSelect } from '@/components/common'
 import { SelectOption } from '@/components/common/common.select.vue'
 import { IconClose } from '@/components/icon'
-import { injectModal } from '@/store/store.provide-modal'
+import { injectModal } from '@/provide/store.provide-modal'
 import { shallowRef } from 'vue'
 
 const { close } = injectModal()

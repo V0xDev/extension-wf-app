@@ -8,7 +8,7 @@ defineProps<Props>()
 
 <template>
   <div class="settings flex flex-col gap-15">
-    <h2 class="font-medium text-18 leading-18 text-primary">{{ title }}</h2>
+    <h2 class="font-bold text-18 leading-18 text-primary">{{ title }}</h2>
     <slot />
   </div>
 </template>

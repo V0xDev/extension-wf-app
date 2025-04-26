@@ -1,19 +1,35 @@
 import { SelectOption } from '@/components/common/common.select.vue'
+import { Theme } from '@/types/types.theme'
 
-export const OPTIONS: SelectOption<string>[] = [
-  {
-    key: 1,
-    raw: 'system',
-    display: 'Системная',
-  },
-  {
-    key: 2,
-    raw: 'white',
-    display: 'Белая',
-  },
-  {
-    key: 3,
-    raw: 'black',
-    display: 'Темная',
-  },
-]
+export enum THEME {
+  LIGHT = 'light',
+  DARK = 'dark',
+  SYSTEM = 'system',
+}
+
+export const OPTIONS = new Map<Theme, SelectOption<Theme>>([
+  [
+    'system',
+    {
+      key: 1,
+      raw: 'system',
+      display: 'Системная',
+    },
+  ],
+  [
+    'dark',
+    {
+      key: 2,
+      raw: 'dark',
+      display: 'Темная',
+    },
+  ],
+  [
+    'white',
+    {
+      key: 3,
+      raw: 'white',
+      display: 'Светлая',
+    },
+  ],
+])

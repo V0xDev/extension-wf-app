@@ -4,7 +4,7 @@ import { prettyNumber } from '@/utils/utils.number'
 
 type Props = {
   title: string
-  value: number
+  value: string | number | boolean
 }
 
 defineProps<Props>()

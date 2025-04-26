@@ -1,9 +1,12 @@
 <script setup lang="ts">
-// import { hasPairs, isAccessExpired } from '@/lib/api/jwt'
+import { injectTheme } from '@/provide/provide.theme'
+import { useRouter } from 'vue-router'
 
-// const router = useRouter()
+const router = useRouter()
 
-// if (hasPairs() && !isAccessExpired()) {
+// const { hasTheme, theme } = injectTheme()
+
+// if (hasTheme()) {
 //   router.push('/')
 // }
 </script>

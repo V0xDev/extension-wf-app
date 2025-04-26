@@ -6,28 +6,46 @@
   @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 }
 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 @theme {
   --color-primary: #eaeaea;
   --color-secondary: #eaeaea81;
   --color-tertiary: #eaeaea29;
-
   --color-bg: #212121;
-
-  --color-checkbox: #141414;
-
   --color-text-accent: #fff;
-
   --color-icon: #eaeaea;
-
   --color-select-accent: #000;
-
   --color-input-text: #eaeaea;
-
   --shadow-b: 0px 2px 11px 0px #181818;
-
   --color-scrollbar-bg: #0000001a;
   --color-scrollbar-thumb: #00000080;
   --color-scrollbar-thumb-hover: #000000b3;
+}
+
+[data-theme='dark'] {
+  --color-primary: #eaeaea;
+  --color-secondary: #eaeaea81;
+  --color-tertiary: #eaeaea29;
+  --color-bg: #212121;
+  --color-text-accent: #fff;
+  --color-icon: #eaeaea;
+  --color-select-accent: #000;
+  --color-input-text: #eaeaea;
+  --color-scrollbar-bg: #0000001a;
+  --color-scrollbar-thumb: #00000080;
+  --color-scrollbar-thumb-hover: #000000b3;
+}
+
+[data-theme='white'] {
+  --color-primary: #2d2d2d;
+  --color-secondary: #2d2d2d81;
+  --color-tertiary: #2d2d2d29;
+  --color-bg: #eeeeee;
+  --color-icon: #3d3d3d;
+  --color-select-accent: #000;
+  --color-input-text: #161616;
+  --shadow-b: 0px 1px 5px 0px #18181836;
 }
 
 @layer base {
@@ -54,11 +72,17 @@
   }
 }
 
+@layer utilities {
+  .shadow-b {
+    box-shadow: var(--shadow-b);
+  }
+}
+
 html {
   font-size: 62.5%;
   width: 100%;
   height: 100%;
-  background-color: var(--color-bg);
+  background-color: rgb(47, 47, 47);
 }
 
 html,

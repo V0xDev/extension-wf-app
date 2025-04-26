@@ -19,7 +19,7 @@ const model = defineModel({ default: false, required: true })
         checked:bg-tertiary relative border-2 border-secondary
         checked:border-secondary before:content-[''] before:absolute before:top-2
         before:left-4 before:w-6 before:h-8 before:border-r-2 before:border-b-2
-        before:border-white before:rotate-45 before:scale-0 checked:before:scale-100 transition-all
+        before:border-primary before:rotate-45 before:scale-0 checked:before:scale-100 transition-all
       "
     />
     <label for="default-checkbox" class="ms-2 text-16 leading-16 font-medium text-primary">

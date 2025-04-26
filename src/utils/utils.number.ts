@@ -1,7 +1,14 @@
 export function prettyNumber(
-  num: number,
+  value: string | number | boolean,
   locales: Intl.LocalesArgument = 'ru-RU',
   options?: Intl.NumberFormatOptions,
 ) {
-  return num.toLocaleString(locales, options)
+  const isBoolean = typeof value === 'boolean'
+  const isString = typeof value === 'string'
+
+  if (isBoolean || isString) {
+    return 0
+  }
+
+  return value.toLocaleString(locales, options)
 }

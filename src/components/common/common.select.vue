@@ -18,6 +18,10 @@ type Props<T> = {
   isStretch?: boolean
 }
 
+type Emits = {
+  (e: 'onSelect', v: T): void
+}
+
 const props = withDefaults(defineProps<Props<T>>(), {
   placeholder: 'Выберите значение',
   isRounded: true,
@@ -29,9 +33,12 @@ const target = useTemplateRef<HTMLElement>('selectRef')
 const modelValue = defineModel<SelectOption<T>>({ required: true })
 const isOpen = defineModel('is-open', { default: false })
 
+const emits = defineEmits<Emits>()
+
 const selectOption = (value: SelectOption<T>) => {
   modelValue.value = value
   isOpen.value = false
+  emits('onSelect', value.raw)
 }
 
 const onDisplayClick = () => {
@@ -57,10 +64,10 @@ onClickOutside(target, () => (isOpen.value = false))
 
     <div class="flex items-center">
       <div class="flex-1">
-        <span v-if="modelValue" class="block py-1 px-8 text-14 truncate text-white">
+        <span v-if="modelValue" class="block py-1 px-8 text-14 truncate text-primary">
           {{ modelValue.display }}
         </span>
-        <span v-else class="block py-1 px-8 text-14 truncate text-white">
+        <span v-else class="block py-1 px-8 text-14 truncate text-primary">
           {{ placeholder }}
         </span>
       </div>
@@ -78,7 +85,7 @@ onClickOutside(target, () => (isOpen.value = false))
     <transition name="slide-fade">
       <ul
         v-show="isOpen"
-        class="absolute z-10 mt-1 w-full max-h-[100px] overflow-auto bg-secondary rounded-b-5 shadow-sm"
+        class="absolute z-10 mt-1 w-full max-h-[100px] overflow-auto bg-secondary/10 rounded-b-5 shadow-sm"
       >
         <li v-if="isValidOptions" class="text-14 py-5 px-8 text-primary select-none">
           <slot name="no-content">Данных пока нет...</slot>
@@ -88,8 +95,8 @@ onClickOutside(target, () => (isOpen.value = false))
           v-for="{ key, display, raw } in options"
           :key="key"
           @click.stop="selectOption({ key, display, raw })"
-          class="cursor-pointer text-14 py-5 px-8 truncate"
-          :class="[{ 'bg-bg/30 text-primary': modelValue?.key === key }]"
+          class="cursor-pointer text-primary text-14 py-5 px-8 truncate"
+          :class="[{ 'bg-secondary/50 ': modelValue?.key === key }]"
         >
           <slot :key="key" :display="display" :raw="raw">
             {{ display }}

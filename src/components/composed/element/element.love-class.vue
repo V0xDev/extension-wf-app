@@ -24,11 +24,11 @@ const getClassName = computed(() => {
 <template>
   <CommonElementWrapper title="Любимые классы">
     <ul class="flex gap-15">
-      <li class="text-16 leading-16">
-        PvP: <span class="text-dark opacity-50">{{ getClassName.pvpClassName }}</span>
+      <li class="text-primary text-16 leading-16">
+        PvP: <span class="text-secondary">{{ getClassName.pvpClassName }}</span>
       </li>
-      <li class="text-16 leading-16">
-        PvE: <span class="text-dark opacity-50">{{ getClassName.pveClassName }}</span>
+      <li class="text-primary text-16 leading-16">
+        PvE: <span class="text-secondary">{{ getClassName.pveClassName }}</span>
       </li>
     </ul>
   </CommonElementWrapper>

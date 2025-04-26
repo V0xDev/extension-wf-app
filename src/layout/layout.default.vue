@@ -9,7 +9,7 @@
 </script>
 
 <template>
-  <div class="layout">
+  <div class="bg-bg layout">
     <slot />
   </div>
 </template>

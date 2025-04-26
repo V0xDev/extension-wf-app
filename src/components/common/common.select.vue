@@ -34,11 +34,6 @@ const selectOption = (value: SelectOption<T>) => {
   isOpen.value = false
 }
 
-const clearSelection = () => {
-  modelValue.value = null
-  isOpen.value = false
-}
-
 const onDisplayClick = () => {
   isOpen.value = !isOpen.value
 }
@@ -53,7 +48,7 @@ onClickOutside(target, () => (isOpen.value = false))
     ref="selectRef"
     @click="onDisplayClick"
     @keydown.esc="isOpen = false"
-    class="relative box-border select-none bg-black border-2 border-border-opacity"
+    class="relative box-border select-none bg-bg border-2 border-tertiary"
     :class="[{ 'w-full': isStretch }, { 'rounded-5': isRounded }]"
   >
     <label v-if="label" class="block text-16 font-medium text-gray-700">
@@ -72,7 +67,7 @@ onClickOutside(target, () => (isOpen.value = false))
 
       <div class="absolute right-2 flex items-center space-x-1">
         <CommonIconWrapper
-          class="transform transition-transform duration-200"
+          class="text-icon transform transition-transform duration-200"
           :class="{ 'rotate-180': isOpen }"
         >
           <IconArrowDown />
@@ -83,9 +78,9 @@ onClickOutside(target, () => (isOpen.value = false))
     <transition name="slide-fade">
       <ul
         v-show="isOpen"
-        class="absolute z-10 mt-1 w-full max-h-[100px] overflow-auto bg-black border border-border-opacity rounded-b-5 shadow-sm"
+        class="absolute z-10 mt-1 w-full max-h-[100px] overflow-auto bg-secondary border border-border-opacity rounded-b-5 shadow-sm"
       >
-        <li v-if="isValidOptions" class="text-14 py-5 px-8 text-gray-500 select-none">
+        <li v-if="isValidOptions" class="text-14 py-5 px-8 text-primary select-none">
           <slot name="no-content">Данных пока нет...</slot>
         </li>
         <li
@@ -93,10 +88,8 @@ onClickOutside(target, () => (isOpen.value = false))
           v-for="{ key, display, raw } in options"
           :key="key"
           @click.stop="selectOption({ key, display, raw })"
-          :class="[
-            'cursor-pointer text-14  py-5 px-8 truncate',
-            modelValue?.key === key ? 'bg-white/50 text-black' : 'hover:opacity-80',
-          ]"
+          class="cursor-pointer text-14 py-5 px-8 truncate"
+          :class="[{ 'bg-bg/30 text-primary': modelValue?.key === key }]"
         >
           <slot :key="key" :display="display" :raw="raw">
             {{ display }}

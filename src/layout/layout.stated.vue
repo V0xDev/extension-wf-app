@@ -9,7 +9,7 @@
 </script>
 
 <template>
-  <div class="layout items-center gap-20 px-14 py-18">
+  <div class="layout bg-bg items-center gap-20 px-14 py-18">
     <slot />
   </div>
 </template>

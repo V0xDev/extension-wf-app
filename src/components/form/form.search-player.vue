@@ -23,7 +23,7 @@ const onSubmit = () => {
   <form @submit.prevent="onSubmit" class="relative w-[260px] flex items-center">
     <CommonInput v-model="name" class="w-full pr-40" placeholder="Введите ник..." />
     <button type="submit" class="absolute right-10">
-      <CommonIconWrapper>
+      <CommonIconWrapper class="text-icon">
         <IconSearch />
       </CommonIconWrapper>
     </button>

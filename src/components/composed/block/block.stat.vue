@@ -18,7 +18,7 @@ const { data, isLoading, isError } = injectPlayerStats()
     <CommonSkeletonWrapper v-if="isLoading">
       <SkeletonStatistic />
     </CommonSkeletonWrapper>
-    <p class="mt-24 text-center text-14 leading-18 opacity-40" v-else-if="isError">
+    <p class="text-secondary mt-24 text-center text-14 leading-18" v-else-if="isError">
       Ошибка загрузки данных: пользователь не найден
     </p>
     <div class="flex flex-col gap-10" v-else>

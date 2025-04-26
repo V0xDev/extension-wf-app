@@ -33,23 +33,23 @@ const onBack = () => {
 <template>
   <div class="w-full px-14 py-16 pt-24 flex sticky top-0 z-10 items-start justify-between shadow-b">
     <button @click="onBack">
-      <CommonIconWrapper>
+      <CommonIconWrapper class="text-icon">
         <IconArrowLeft />
       </CommonIconWrapper>
     </button>
     <div class="text-center">
-      <h2 class="font-medium text-26 leading-26 text-dark">
+      <h2 class="text-primary font-medium text-26 leading-26 text-dark">
         {{ nickName }}
       </h2>
       <CommonSkeletonWrapper v-if="isLoading">
-        <div class="mt-2 w-full h-16 rounded-full bg-white/60 dark:bg-dark/80"></div>
+        <div class="mt-2 w-full h-16 rounded-full bg-secondary dark:bg-dark/80"></div>
       </CommonSkeletonWrapper>
-      <p v-else-if="shouldShowClan" class="mt-2 text-color text-14 leading-16 opacity-40">
+      <p v-else-if="shouldShowClan" class="text-secondary mt-2 text-color text-14 leading-16">
         {{ clanName }}
       </p>
     </div>
     <button @click="show">
-      <CommonIconWrapper>
+      <CommonIconWrapper class="text-icon">
         <IconSettings />
       </CommonIconWrapper>
     </button>

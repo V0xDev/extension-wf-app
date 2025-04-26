@@ -17,11 +17,11 @@ const emits = defineEmits<Emits>()
 </script>
 
 <template>
-  <div class="flex flex-col gap-8 border-2 border-white/20 rounded-8 px-10 py-10">
+  <div class="flex flex-col gap-8 border-2 border-tertiary rounded-8 px-10 py-10">
     <div class="flex items-center justify-between">
-      <h2 class="font-medium text-16 leading-16">{{ title }}</h2>
+      <h2 class="text-primary font-medium text-16 leading-16">{{ title }}</h2>
       <button @click="emits('onHide')">
-        <CommonIconWrapper>
+        <CommonIconWrapper class="text-icon">
           <IconClose />
         </CommonIconWrapper>
       </button>

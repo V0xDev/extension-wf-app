@@ -20,9 +20,9 @@ const layoutComponent = computed(
   () => layouts[(meta.value.layout || 'default') as keyof typeof layouts],
 )
 provideModal()
-const { initialStorage } = provideTheme()
+const { initialTheme } = provideTheme()
 
-onMounted(() => initialStorage())
+onMounted(() => initialTheme())
 </script>
 
 <template>

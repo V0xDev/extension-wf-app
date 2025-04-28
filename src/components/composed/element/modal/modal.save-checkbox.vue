@@ -1,11 +1,19 @@
 <script setup lang="ts">
 import { CommonSelectCheckbox } from '@/components/common'
+import { usePlayerSettings } from '@/lib/hooks/hook.player'
+import { onMounted, shallowRef } from 'vue'
 
-import { shallowRef } from 'vue'
+const isPlayerSave = shallowRef(true)
 
-const checkbox = shallowRef(false)
+const { isSaveName, toggleSaveNick } = usePlayerSettings()
+
+onMounted(() => (isPlayerSave.value = isSaveName.value))
 </script>
 
 <template>
-  <CommonSelectCheckbox title="Запомнить имя персонажа" v-model="checkbox" />
+  <CommonSelectCheckbox
+    v-model="isPlayerSave"
+    title="Запомнить игрока"
+    @on-change="toggleSaveNick"
+  />
 </template>

@@ -4,7 +4,6 @@ import { CommonIconWrapper } from '@/components/common'
 import { IconArrowLeft, IconSettings } from '@/components/icon'
 import { CommonSkeletonWrapper } from '@/components/common'
 import { injectPlayerStats } from '@/lib/provide/provide.player'
-import { computed } from 'vue'
 import { injectModal } from '@/lib/provide/provide.modal'
 
 type Props = {
@@ -22,11 +21,7 @@ const { show } = injectModal()
 const onBack = () => {
   if (props.link) return router.push(props.link)
 
-  if (window.history.length > 0) {
-    router.back()
-  } else {
-    router.push('/')
-  }
+  router.push('/')
 }
 </script>
 

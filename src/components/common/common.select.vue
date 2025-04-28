@@ -30,7 +30,7 @@ const props = withDefaults(defineProps<Props<T>>(), {
 
 const target = useTemplateRef<HTMLElement>('selectRef')
 
-const modelValue = defineModel<SelectOption<T>>({ required: true })
+const modelValue = defineModel<SelectOption<T>>({ required: false })
 const isOpen = defineModel('is-open', { default: false })
 
 const emits = defineEmits<Emits>()

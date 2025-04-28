@@ -6,6 +6,17 @@ type Props = {
 defineProps<Props>()
 
 const model = defineModel({ default: false, required: true })
+
+type Emits = {
+  (e: 'onChange', val: boolean): void
+}
+
+const emits = defineEmits<Emits>()
+
+const onSelect = (e: Event) => {
+  const target = e.target as HTMLInputElement
+  emits('onChange', target.checked)
+}
 </script>
 
 <template>
@@ -14,7 +25,8 @@ const model = defineModel({ default: false, required: true })
     <input
       id="default-checkbox"
       type="checkbox"
-      :value="model"
+      v-model="model"
+      @input="onSelect"
       class="peer appearance-none w-18 h-18 rounded-2 bg-bg
         checked:bg-tertiary relative border-2 border-secondary
         checked:border-secondary before:content-[''] before:absolute before:top-2

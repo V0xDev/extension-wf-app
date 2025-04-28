@@ -1,22 +1,28 @@
 import { computed, shallowRef } from 'vue'
 
-export function useLocalStorage(key: string, initialValue: string) {
+export function useLocalStorage<T>(key: string, initialValue?: T) {
   const valueRef = shallowRef()
 
   const stored = localStorage.getItem(key)
-  if (stored !== null) {
+  if (stored) {
     valueRef.value = stored
-  } else {
-    valueRef.value = stored
-    localStorage.setItem(key, initialValue)
+  } else if (initialValue) {
+    valueRef.value = initialValue
+    localStorage.setItem(key, JSON.stringify(initialValue))
   }
 
-  const setValue = (value: string) => {
+  const setValue = (value: T) => {
     valueRef.value = value
-    localStorage.setItem(key, value)
+    localStorage.setItem(key, JSON.stringify(value))
   }
 
-  const getValue = computed(() => valueRef.value)
+  const getValue = computed(() => {
+    if (valueRef.value) {
+      return JSON.parse(valueRef.value)
+    }
+
+    return undefined
+  })
 
   const removeValue = () => {
     valueRef.value = initialValue

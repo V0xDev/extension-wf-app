@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { CommonIconWrapper, CommonInput } from '@/components/common'
 import { IconSearch } from '@/components/icon'
-import { shallowRef } from 'vue'
+import { usePlayerSettings } from '@/lib/hooks/hook.player'
+import { onMounted, shallowRef } from 'vue'
 import { useRouter } from 'vue-router'
+
+const { isSaveName, setName, getName } = usePlayerSettings()
 
 const name = shallowRef('')
 
@@ -15,8 +18,19 @@ const onSubmit = () => {
     return
   }
 
+  if (isSaveName.value) {
+    setName(trimmedName)
+  }
+
   router.push(`/stats/${trimmedName}`)
 }
+
+onMounted(() => {
+  if (isSaveName.value) {
+    name.value = getName.value
+    return
+  }
+})
 </script>
 
 <template>

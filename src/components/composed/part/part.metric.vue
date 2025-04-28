@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { CommonPartStatWrapper } from '@/components/common'
-import { prettyNumber } from '@/utils/utils.number'
+import { prettyNumber } from '@/lib/utils/utils.number'
 
 type Props = {
   title: string

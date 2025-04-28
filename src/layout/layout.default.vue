@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { injectTheme } from '@/provide/provide.theme'
+import { injectTheme } from '@/lib/provide/provide.theme'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()

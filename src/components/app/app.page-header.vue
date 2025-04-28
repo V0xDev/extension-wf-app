@@ -3,9 +3,9 @@ import { useRouter } from 'vue-router'
 import { CommonIconWrapper } from '@/components/common'
 import { IconArrowLeft, IconSettings } from '@/components/icon'
 import { CommonSkeletonWrapper } from '@/components/common'
-import { injectPlayerStats } from '@/provide/provide.player'
+import { injectPlayerStats } from '@/lib/provide/provide.player'
 import { computed } from 'vue'
-import { injectModal } from '@/provide/provide.modal'
+import { injectModal } from '@/lib/provide/provide.modal'
 
 type Props = {
   link?: string

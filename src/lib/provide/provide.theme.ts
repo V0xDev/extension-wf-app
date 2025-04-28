@@ -1,6 +1,6 @@
 import { SelectOption } from '@/components/common/common.select.vue'
-import { OPTIONS, THEME } from '@/constants/theme'
-import { Theme } from '@/types/types.theme'
+import { OPTIONS, THEME } from '@/lib/constants/constant.theme'
+import { Theme } from '@/lib/types/types.theme'
 import { inject, provide, shallowRef } from 'vue'
 
 const THEME_STORE_KEY = '$theme-store-key'

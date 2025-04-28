@@ -1,4 +1,4 @@
-import { getStatisticQuery } from '@/api/query/query.player'
+import { getStatisticQuery } from '@/lib/api/query/query.player'
 import { computed, inject, provide } from 'vue'
 import { useRoute } from 'vue-router'
 

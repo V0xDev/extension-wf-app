@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { CommonElementStatWrapper } from '@/components/common'
-import { ApiResponse } from '@/api/types/dto/dto.api'
+import { ApiResponse } from '@/lib/api/types/dto/dto.api'
 import { computed } from 'vue'
 
 const { favoritPVE, favoritPVP } = defineProps<ApiResponse>()

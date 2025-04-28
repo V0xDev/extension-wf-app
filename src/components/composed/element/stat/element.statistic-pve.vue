@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { CommonElementStatWrapper } from '@/components/common'
 import { PartMetric } from '@/components/composed/part'
-import { ApiResponse } from '@/api/types/dto/dto.api'
+import { ApiResponse } from '@/lib/api/types/dto/dto.api'
 
 defineProps<ApiResponse>()
 </script>

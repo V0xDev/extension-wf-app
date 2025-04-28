@@ -1,4 +1,4 @@
-import { ApiResponse } from '@/api/types/dto/dto.api'
+import { ApiResponse } from '@/lib/api/types/dto/dto.api'
 import axios from 'axios'
 
 export function getStatistic(name: string) {

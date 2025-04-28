@@ -1,4 +1,4 @@
-import { getStatistic } from '@/api/route/route.player'
+import { getStatistic } from '@/lib/api/route/route.player'
 import { useQuery } from '@tanstack/vue-query'
 import { ComputedRef } from 'vue'
 

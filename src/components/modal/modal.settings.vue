@@ -2,7 +2,7 @@
 import { CommonIconWrapper, CommonModalContainer } from '@/components/common'
 import { ElementModalSystem, ElementModalViewStat } from '@/components/composed/element'
 import { IconClose } from '@/components/icon'
-import { injectModal } from '@/provide/provide.modal'
+import { injectModal } from '@/lib/provide/provide.modal'
 
 const { close } = injectModal()
 </script>

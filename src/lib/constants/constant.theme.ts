@@ -1,5 +1,5 @@
 import { SelectOption } from '@/components/common/common.select.vue'
-import { Theme } from '@/types/types.theme'
+import { Theme } from '@/lib/types/types.theme'
 
 export enum THEME {
   LIGHT = 'light',

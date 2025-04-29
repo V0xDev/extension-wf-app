@@ -1,16 +1,12 @@
 <script setup lang="ts">
 import { injectPlayerStats } from '@/lib/provide/provide.player'
 import { SkeletonStatistic } from '@/components/composed/skeleton'
-import { CommonSkeletonWrapper } from '@/components/common'
-import {
-  ElementMetric,
-  ElementStatisticPvP,
-  ElementStatisticPvE,
-  ElementStatisticGames,
-  ElementLoveClass,
-} from '@/components/composed/element'
+import { CommonElementStatWrapper, CommonSkeletonWrapper } from '@/components/common'
+import { injectElements } from '@/lib/provide/provide.elements'
 
 const { data, isLoading, isError } = injectPlayerStats()
+
+const { components, isVisibleComponents } = injectElements()
 </script>
 
 <template>
@@ -21,12 +17,13 @@ const { data, isLoading, isError } = injectPlayerStats()
     <p class="text-secondary mt-24 text-center text-14 leading-18" v-else-if="isError">
       Ошибка загрузки данных: пользователь не найден
     </p>
+    <p class="text-secondary mt-24 text-center text-14 leading-18" v-else-if="isVisibleComponents">
+      Все блоки статистики отключены в настройках.
+    </p>
     <div class="flex flex-col gap-10" v-else>
-      <ElementMetric v-bind="data" />
-      <ElementLoveClass v-bind="data" />
-      <ElementStatisticGames v-bind="data" />
-      <ElementStatisticPvP v-bind="data" />
-      <ElementStatisticPvE v-bind="data" />
+      <CommonElementStatWrapper v-for="comp in components" :title="comp.name" :block="comp">
+        <component :is="comp.component" v-bind="data"></component>
+      </CommonElementStatWrapper>
     </div>
   </div>
 </template>

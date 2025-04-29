@@ -58,7 +58,7 @@ onClickOutside(target, () => (isOpen.value = false))
     class="relative box-border select-none bg-bg border-2 border-tertiary"
     :class="[{ 'w-full': isStretch }, { 'rounded-5': isRounded }]"
   >
-    <label v-if="label" class="block text-16 font-medium text-gray-700">
+    <label v-if="label" class="block text-16 leading-16 font-medium text-gray-700">
       {{ label }}
     </label>
 

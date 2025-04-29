@@ -1,10 +1,13 @@
 <script setup lang="ts">
-import { CommonElementModalWrapper, CommonSelect } from '@/components/common'
-import { PartModal } from '@/components/composed/part'
+import { CommonElementModalWrapper, CommonSwitch } from '@/components/common'
+import { injectElements } from '@/lib/provide/provide.elements'
+import { ModalSwitchComponent } from '@/components/composed/element'
+
+const { components } = injectElements()
 </script>
 
 <template>
   <CommonElementModalWrapper title="Отображение блоков">
-    <PartModal title="Тест"> 123 </PartModal>
+    <ModalSwitchComponent v-for="com in components" :component="com" />
   </CommonElementModalWrapper>
 </template>

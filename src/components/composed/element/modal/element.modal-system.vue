@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import { CommonElementModalWrapper } from '@/components/common'
-import { ElementModalSaveCheckbox, ElementModalThemeSelect } from '@/components/composed/element'
+import { ModalSaveCheckbox, ModalThemeSelect } from '@/components/composed/element'
 import { PartModal } from '@/components/composed/part'
 </script>
 
 <template>
   <CommonElementModalWrapper title="Системные">
     <PartModal>
-      <ElementModalSaveCheckbox />
+      <ModalSaveCheckbox />
     </PartModal>
     <PartModal title="Тема" align="column">
-      <ElementModalThemeSelect />
+      <ModalThemeSelect />
     </PartModal>
   </CommonElementModalWrapper>
 </template>

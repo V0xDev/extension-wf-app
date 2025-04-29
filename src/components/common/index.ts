@@ -8,3 +8,4 @@ export { default as CommonPartModalWrapper } from './common.part-modal-wrapper.v
 export { default as CommonModalContainer } from './common.modal-container.vue'
 export { default as CommonSelect } from './common.select.vue'
 export { default as CommonSelectCheckbox } from './common.select-checkbox.vue'
+export { default as CommonSwitch } from './common.switch.vue'

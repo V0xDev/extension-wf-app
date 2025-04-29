@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { CommonIconWrapper, CommonModalContainer } from '@/components/common'
-import { ElementModalSystem } from '@/components/composed/element'
+import { ElementModalSystem, ElementModalViewStat } from '@/components/composed/element'
 import { IconClose } from '@/components/icon'
 import { injectModal } from '@/lib/provide/provide.modal'
 
@@ -23,7 +23,7 @@ const { close } = injectModal()
       </div>
       <div class="px-18 py-14 flex-1 flex flex-col gap-20 overflow-y-auto">
         <ElementModalSystem />
-        <!-- <ElementModalViewStat /> -->
+        <ElementModalViewStat />
       </div>
     </div>
   </CommonModalContainer>

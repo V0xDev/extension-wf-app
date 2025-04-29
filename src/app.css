@@ -8,6 +8,12 @@
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
+:root {
+  --color-scrollbar-bg: #0000001a;
+  --color-scrollbar-thumb: #00000080;
+  --color-scrollbar-thumb-hover: #000000b3;
+}
+
 @theme {
   --color-primary: #eaeaea;
   --color-secondary: #eaeaea81;
@@ -18,9 +24,6 @@
   --color-select-accent: #000;
   --color-input-text: #eaeaea;
   --shadow-b: 0px 2px 11px 0px #181818;
-  --color-scrollbar-bg: #0000001a;
-  --color-scrollbar-thumb: #00000080;
-  --color-scrollbar-thumb-hover: #000000b3;
 }
 
 [data-theme='dark'] {
@@ -28,13 +31,9 @@
   --color-secondary: #eaeaea81;
   --color-tertiary: #eaeaea29;
   --color-bg: #212121;
-  --color-text-accent: #fff;
   --color-icon: #eaeaea;
   --color-select-accent: #000;
   --color-input-text: #eaeaea;
-  --color-scrollbar-bg: #0000001a;
-  --color-scrollbar-thumb: #00000080;
-  --color-scrollbar-thumb-hover: #000000b3;
 }
 
 [data-theme='white'] {

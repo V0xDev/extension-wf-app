@@ -5,7 +5,7 @@ import {
 } from '@/components/composed/element'
 import ElementStatisticPve from '@/components/composed/element/stat/element.statistic-pve.vue'
 import ElementStatisticPvp from '@/components/composed/element/stat/element.statistic-pvp.vue'
-import { Component, computed, inject, provide, reactive } from 'vue'
+import { Component, computed, inject, markRaw, provide, reactive, shallowRef } from 'vue'
 
 const ELEMENTS_STORE_KEY = '$elements-store-key'
 
@@ -21,27 +21,27 @@ export function provideElements() {
   const components = reactive<ComponentStatistic[]>([
     {
       name: 'Ключевые метрики PvP',
-      component: ElementMetric,
+      component: markRaw(ElementMetric),
       visible: true,
     },
     {
       name: 'Любимые классы',
-      component: ElementLoveClass,
+      component: markRaw(ElementLoveClass),
       visible: true,
     },
     {
       name: 'Сыграно игр',
-      component: ElementStatisticGames,
+      component: markRaw(ElementStatisticGames),
       visible: true,
     },
     {
       name: 'Статистика PvE',
-      component: ElementStatisticPve,
+      component: markRaw(ElementStatisticPve),
       visible: true,
     },
     {
       name: 'Статистика PvP',
-      component: ElementStatisticPvp,
+      component: markRaw(ElementStatisticPvp),
       visible: true,
     },
   ])

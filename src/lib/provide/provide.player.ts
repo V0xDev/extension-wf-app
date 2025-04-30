@@ -15,7 +15,7 @@ export function providePlayerStats() {
 
   const shouldShowClan = computed(() => !isError.value && hasClan.value)
 
-  const { data, isError, isLoading } = getStatisticQuery(nickName)
+  const { data, isError, isLoading, refetch } = getStatisticQuery(nickName)
 
   const toProvide = {
     clanName,
@@ -24,6 +24,7 @@ export function providePlayerStats() {
     data,
     isError,
     isLoading,
+    refetch,
   }
 
   provide(PLAYER_STATS_STORE_KEY, toProvide)

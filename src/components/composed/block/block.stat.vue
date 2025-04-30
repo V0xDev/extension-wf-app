@@ -3,6 +3,7 @@ import { injectPlayerStats } from '@/lib/provide/provide.player'
 import { SkeletonStatistic } from '@/components/composed/skeleton'
 import { CommonElementStatWrapper, CommonSkeletonWrapper } from '@/components/common'
 import { injectElements } from '@/lib/provide/provide.elements'
+import { ElementRefetch } from '@/components/composed/element'
 
 const { data, isLoading, isError } = injectPlayerStats()
 
@@ -21,6 +22,7 @@ const { components, isVisibleComponents } = injectElements()
       Все блоки статистики отключены в настройках.
     </p>
     <div class="flex flex-col gap-10" v-else>
+      <ElementRefetch />
       <CommonElementStatWrapper v-for="comp in components" :title="comp.name" :block="comp">
         <component :is="comp.component" v-bind="data"></component>
       </CommonElementStatWrapper>

@@ -16,8 +16,8 @@
 
 @theme {
   --color-primary: #eaeaea;
-  --color-secondary: #eaeaea81;
-  --color-tertiary: #eaeaea29;
+  --color-secondary: #767676;
+  --color-tertiary: #262626;
   --color-bg: #212121;
   --color-text-accent: #fff;
   --color-icon: #eaeaea;
@@ -28,8 +28,8 @@
 
 [data-theme='dark'] {
   --color-primary: #eaeaea;
-  --color-secondary: #eaeaea81;
-  --color-tertiary: #eaeaea29;
+  --color-secondary: #767676;
+  --color-tertiary: #262626;
   --color-bg: #212121;
   --color-icon: #eaeaea;
   --color-select-accent: #000;
@@ -38,8 +38,8 @@
 
 [data-theme='white'] {
   --color-primary: #2d2d2d;
-  --color-secondary: #2d2d2d81;
-  --color-tertiary: #2d2d2d29;
+  --color-secondary: #959595;
+  --color-tertiary: #dddddd;
   --color-bg: #eeeeee;
   --color-icon: #3d3d3d;
   --color-select-accent: #000;

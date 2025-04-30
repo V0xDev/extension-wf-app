@@ -85,7 +85,7 @@ onClickOutside(target, () => (isOpen.value = false))
     <transition name="slide-fade">
       <ul
         v-show="isOpen"
-        class="absolute mt-1 w-full max-h-[100px] overflow-auto border-2 border-tertiary bg-tertiary rounded-b-5 shadow-sm"
+        class="absolute z-10 mt-1 w-full max-h-[100px] overflow-auto border-2 border-tertiary bg-tertiary rounded-b-5 shadow-sm"
       >
         <li v-if="isValidOptions" class="text-14 py-5 px-8 text-primary select-none">
           <slot name="no-content">Данных пока нет...</slot>

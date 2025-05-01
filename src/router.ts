@@ -1,10 +1,10 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createMemoryHistory } from 'vue-router'
 import { StatsView } from '@/pages/stats'
 import { MainView } from '@/pages/main'
 import { setupPlayerRedirect } from '@/lib/middleware/router/setup.player-redirect'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createMemoryHistory(),
   routes: [MainView, StatsView],
 })
 

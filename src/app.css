@@ -87,12 +87,11 @@ html {
 html,
 body {
   font-family: 'Roboto', sans-serif;
-  min-width: 380px;
-  min-height: 550px;
 }
 
 #app {
-  height: 100dvh;
+  width: 380px;
+  height: 550px;
   overflow: hidden;
   display: flex;
   justify-content: center;

@@ -5,7 +5,7 @@ export function useLocalStorage<T>(key: string, initialValue?: T) {
 
   const stored = localStorage.getItem(key)
   if (stored) {
-    valueRef.value = stored
+    valueRef.value = JSON.parse(stored)
   } else if (initialValue) {
     valueRef.value = initialValue
     localStorage.setItem(key, JSON.stringify(initialValue))
@@ -16,13 +16,7 @@ export function useLocalStorage<T>(key: string, initialValue?: T) {
     localStorage.setItem(key, JSON.stringify(value))
   }
 
-  const getValue = computed(() => {
-    if (valueRef.value) {
-      return JSON.parse(valueRef.value)
-    }
-
-    return undefined
-  })
+  const getValue = computed(() => valueRef.value)
 
   const removeValue = () => {
     valueRef.value = initialValue

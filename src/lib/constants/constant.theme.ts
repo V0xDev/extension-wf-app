@@ -2,7 +2,7 @@ import { SelectOption } from '@/components/common/common.select.vue'
 import { Theme } from '@/lib/types/types.theme'
 
 export enum THEME {
-  LIGHT = 'light',
+  LIGHT = 'white',
   DARK = 'dark',
   SYSTEM = 'system',
 }

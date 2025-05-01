@@ -10,5 +10,7 @@
   },
   "action": {
     "default_popup": "index.html"
-  }
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["https://api.warface.ru/*"]
 }

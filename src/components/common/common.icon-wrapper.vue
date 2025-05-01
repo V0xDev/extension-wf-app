@@ -10,6 +10,12 @@ withDefaults(defineProps<Props>(), {
   height: '24',
   color: 'currentColor',
 })
+
+// Функция для получения числового значения без 'px'
+const getNumericValue = (value: string | number) => {
+  if (typeof value === 'number') return value
+  return parseInt(value.replace('px', ''))
+}
 </script>
 
 <template>
@@ -18,7 +24,7 @@ withDefaults(defineProps<Props>(), {
     :width="width"
     :height="height"
     :style="`min-width: ${width}px; min-height: ${height}px`"
-    :viewBox="`0 0 ${width} ${height}`"
+    :viewBox="`0 0 ${getNumericValue(width)} ${getNumericValue(height)}`"
     role="presentation"
   >
     <g :fill="color">

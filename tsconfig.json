@@ -1,15 +1,16 @@
 {
   "compilerOptions": {
+    "skipLibCheck": true,
     "module": "ESNext",
     "target": "ESNext",
     "moduleResolution": "Bundler",
+    "types": ["node"],
     "declaration": true,
     "emitDeclarationOnly": false,
     "outDir": "./dist",
     "baseUrl": ".",
-    "types": ["node"],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]
     }
   },
   "include": ["src/**/*", "src/**/*.vue"],

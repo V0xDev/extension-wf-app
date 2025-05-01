@@ -1,5 +1,6 @@
 {
-  "name": "electron-wf-app",
+  "name": "extension-wf-vue-app",
+  "author": "V0xDev",
   "private": true,
   "version": "0.0.0",
   "type": "module",

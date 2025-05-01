@@ -14,6 +14,6 @@ export function getStatisticQuery(name: ComputedRef<string>) {
       return response.data
     },
     retry: 1,
-    refetchOnWindowFocus: false,
+    refetchOnWindowFocus: true,
   })
 }

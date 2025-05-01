@@ -6,7 +6,7 @@ import { IconLogo } from '@/components/icon'
 
 <template>
   <div class="flex flex-col items-center gap-5 pt-45">
-    <CommonIconWrapper width="200px" height="140px">
+    <CommonIconWrapper width="200" height="140">
       <IconLogo />
     </CommonIconWrapper>
     <h1 class="text-primary text-20 leading-30 pt-20">Добро пожаловать</h1>

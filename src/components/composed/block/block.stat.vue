@@ -11,7 +11,7 @@ const { components, isVisibleComponents } = injectElements()
 </script>
 
 <template>
-  <div class="flex-1 overflow-y-auto px-14 py-18">
+  <div class="flex-1 overflow-y-auto px-14 py-18 mask-y-from-95%">
     <CommonSkeletonWrapper v-if="isLoading">
       <SkeletonStatistic />
     </CommonSkeletonWrapper>

@@ -21,7 +21,7 @@ const { close } = injectModal()
           </CommonIconWrapper>
         </button>
       </div>
-      <div class="px-18 py-14 flex-1 flex flex-col gap-20 overflow-y-auto">
+      <div class="px-18 py-14 flex-1 flex flex-col gap-20 overflow-y-auto mask-y-from-90%">
         <ElementModalSystem />
         <ElementModalViewStat />
       </div>

@@ -1,11 +1,5 @@
-import {
-  ElementLoveClass,
-  ElementMetric,
-  ElementStatisticGames,
-} from '@/components/composed/element'
-import ElementStatisticPve from '@/components/composed/element/stat/element.statistic-pve.vue'
-import ElementStatisticPvp from '@/components/composed/element/stat/element.statistic-pvp.vue'
-import { Component, computed, inject, markRaw, provide, reactive, shallowRef } from 'vue'
+import { ELEMENTS_STATISTIC } from '@/lib/constants/constant.elements'
+import { Component, computed, inject, provide, reactive } from 'vue'
 
 const ELEMENTS_STORE_KEY = '$elements-store-key'
 
@@ -18,33 +12,7 @@ export type ComponentStatistic = {
 }
 
 export function provideElements() {
-  const components = reactive<ComponentStatistic[]>([
-    {
-      name: 'Ключевые метрики PvP',
-      component: markRaw(ElementMetric),
-      visible: true,
-    },
-    {
-      name: 'Любимые классы',
-      component: markRaw(ElementLoveClass),
-      visible: true,
-    },
-    {
-      name: 'Сыграно игр',
-      component: markRaw(ElementStatisticGames),
-      visible: true,
-    },
-    {
-      name: 'Статистика PvE',
-      component: markRaw(ElementStatisticPve),
-      visible: true,
-    },
-    {
-      name: 'Статистика PvP',
-      component: markRaw(ElementStatisticPvp),
-      visible: true,
-    },
-  ])
+  const components = reactive<ComponentStatistic[]>(ELEMENTS_STATISTIC)
 
   const isVisibleComponents = computed(() => components.every((item) => item.visible === false))
 
